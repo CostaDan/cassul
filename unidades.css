@@ -1,0 +1,149 @@
+/* ========================================================
+   UNIDADES ACESSO SAÚDE - MAPA INTERATIVO APLICADO
+======================================================== */
+
+/* Imports e Base do Seguro (Premium Flow) */
+:root {
+  --primary-orange: #ff7a00;
+  --bg-hover-state: #fff0e5;
+  --transition-base: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* MAIN LAYOUT */
+.hero-unidades {
+  padding-top: 100px;
+  min-height: calc(100vh - 80px); /* Discount footer */
+  padding-bottom: 50px;
+}
+
+.title-badge {
+  background-color: var(--primary-orange);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* PANEL ESQUERDO (MAP) */
+.map-container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#regions_div {
+  width: 100%;
+  height: 500px;
+}
+
+/* PANEL DIREITO (CIDADES) */
+.cities-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  height: 560px; /* Alinhar com o mapa */
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #888;
+}
+
+.empty-state i {
+  font-size: 4rem;
+  color: #dde1e5;
+  margin-bottom: 15px;
+}
+
+.cities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+/* Barra de rolagem estilizada */
+.cities-list::-webkit-scrollbar {
+  width: 6px;
+}
+.cities-list::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+.cities-list::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+.cities-list::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-orange); 
+}
+
+/* Item Cidades */
+.city-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: var(--transition-base);
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+}
+
+.city-item:hover {
+  background-color: var(--bg-hover-state);
+  border-color: rgba(255,122,0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 122, 0, 0.1);
+  color: #111;
+}
+
+.city-item i {
+  color: var(--primary-orange);
+  transition: var(--transition-base);
+}
+
+.city-item:hover i {
+  transform: translateX(4px);
+}
+
+.state-header {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}

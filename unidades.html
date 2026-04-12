@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades — Acesso Saúde Perto de Você</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="unidades.css">
+
+    <!-- Google Charts (Geochart) -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-light fixed-top w-100 z-3 p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" href="index.html">
+                <div class="logo-circle text-white d-flex align-items-center justify-content-center"
+                    style="background-color: var(--primary-orange); width: 40px; height: 40px; border-radius: 50%;">
+                    <i class="bi bi-geo-alt-fill fs-5"></i>
+                </div>
+                <span class="fs-5 fw-bolder">Rede de Unidades</span>
+            </a>
+            <a href="index.html" class="btn border fw-600 rounded-pill px-4 hover-shadow"
+                style="transition:all 0.3s;">Voltar</a>
+        </div>
+    </nav>
+
+    <!-- HERO UNIDADES -->
+    <section class="hero-unidades position-relative">
+        <!-- Blur decorativo de fundo -->
+        <div class="position-absolute top-0 start-50 translate-middle w-100 h-100 opacity-25 z-n1 rounded-circle"
+            style="background-color: var(--soft-orange); filter: blur(120px);"></div>
+
+        <div class="container">
+            <!-- Título Principal -->
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <span class="title-badge d-inline-block mb-3">Mapa Interativo Nacional</span>
+                    <h1 class="display-5 fw-bolder text-dark mb-3">Encontre o Cuidado Perto de Você.</h1>
+                    <p class="lead text-muted mx-auto" style="max-width: 650px; font-weight: 500;">
+                        O Acesso Saúde está presente em dezenas de estados do Brasil. Clique no seu estado no mapa
+                        abaixo para localizar as unidades clínicas integradas mais próximas de sua residência.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interatividade Local -->
+            <div class="row g-4 d-flex align-items-stretch">
+                <!-- Mapa SVG Gerado -->
+                <div class="col-lg-7">
+                    <div class="map-container overflow-hidden">
+                        <!-- Onde o Google Charts instanciará o mapa vetorizado do BRASIL -->
+                        <div id="regions_div"></div>
+                        <div id="loading_map" class="position-absolute top-50 start-50 translate-middle text-center">
+                            <div class="spinner-border text-warning" role="status" style="width: 3rem; height: 3rem;">
+                            </div>
+                            <p class="mt-2 text-muted fw-bold">Carregando Mapa...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel Side Offcanvas List (Unidades) -->
+                <div class="col-lg-5">
+                    <div class="cities-panel">
+
+                        <div class="state-header d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="fw-bolder mb-1" id="state-title">Selecione um Estado</h3>
+                                <p class="text-muted small mb-0" id="state-subtitle">Nenhuma localidade selecionada no
+                                    mapa.</p>
+                            </div>
+                            <div class="bg-light rounded p-2 text-muted" id="state-count" style="display:none;">
+                                <span class="fw-bold fs-5 text-dark" id="count-number">0</span> un.
+                            </div>
+                        </div>
+
+                        <!-- Lista Dinamica / Placeholder -->
+                        <div id="cities-wrapper" class="h-100 d-flex flex-column">
+                            <div class="empty-state" id="empty-state">
+                                <i class="bi bi-map"></i>
+                                <h5>Navegue pelo Mapa</h5>
+                                <p class="small mw-100">Passe o mouse por cima do Brasil e selecione seu estado colorido
+                                    em laranja para verificar nossas sedes.</p>
+                            </div>
+
+                            <!-- A ul onde JS renderiza <li>s -->
+                            <ul class="cities-list" id="cities-list" style="display: none;">
+                                <!-- Item Template Gerado Dinamicamente -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER DA UNIDADE -->
+    <footer class="bg-white py-4 border-top">
+        <div class="container text-center">
+            <p class="mb-0 text-muted small fw-500">&copy; Cartão Acesso Saúde. Protegendo as famílias Brasileiras de
+                norte a sul.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Customizado do Mapa -->
+    <script src="unidades.js"></script>
+</body>
+
+</html>
