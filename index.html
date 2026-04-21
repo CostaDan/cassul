@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão Acesso Saúde</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logcas.png">
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="LOGO-1.png" alt="Acesso Saúde" height="40">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#cartao">O Cartão</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="app.html">App</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidades.html">Unidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="seguro.html">Seguro de vida</a></li>
+        </ul>
+      </div>
+
+      <a href="https://app.cartaoacessosaude.com.br" class="btn btn-primary-custom">Acesse o App</a>
+    </div>
+  </nav>
+
+  <!-- HERO / CARROSSEL -->
+  <div class="hero-wrapper mt-5 pt-5">
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- INDICADORES -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+      <!-- SLIDES -->
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active hero slide-orange">
+          <div class="container text-center hero-content">
+            <span class="badge bg-white text-dark mb-3 px-3 py-2 rounded-pill fw-bold">20 anos de mercado • +2 milhões
+              de clientes</span>
+            <h1>REDE DE CLÍNICAS ACESSO SAÚDE</h1>
+            <p>Descubra o cartão de benefícios feito para quem valoriza saúde de verdade. Estrutura premium para toda a
+              família.</p>
+            <a href="#planos" class="btn btn-light btn-lg mt-3 fw-bold rounded-pill shadow-sm px-4">Ver Planos</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item hero slide-dark">
+          <div class="container text-center hero-content">
+            <span class="badge bg-success mb-3 px-3 py-2 rounded-pill fw-bold">100% Gratuito</span>
+            <h1>CONSULTAS ILIMITADAS</h1>
+            <p><strong>Telemedicina completa:</strong> clínico geral, pediatria, psicologia, nutrição e personal trainer
+              — sem custo extra por consulta.</p>
+            <a href="#planos" class="btn btn-light btn-lg mt-3 fw-bold rounded-pill shadow-sm px-4">Saiba Mais</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="carousel-item hero slide-blue-red">
+          <div class="container text-center hero-content">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Descontos Reais</span>
+            <h1>ATÉ 75% OFF EM FARMÁCIAS</h1>
+            <p>Compre medicamentos mais baratos na <strong>Pague Menos, Droga Raia, Drogasil, São Paulo e
+                Pacheco.</strong> Economia garantida.</p>
+            <a href="#planos" class="btn btn-light btn-lg mt-3 fw-bold rounded-pill shadow-sm px-4">Quero Economizar</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="carousel-item hero slide-pet">
+          <div class="container text-center hero-content">
+            <span class="badge bg-info text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Seu melhor amigo protegido</span>
+            <h1>TELEMEDICINA PET 24H</h1>
+            <p>O cuidado que eles merecem. <br>Fale com um veterinário experiente a qualquer hora do dia ou da noite
+              pelo seu celular. <br>CONSULTAS GRATUIRAS</p>
+            <a href="#planos" class="btn btn-light btn-lg mt-3 fw-bold rounded-pill shadow-sm px-4">Ver Benefícios</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLES -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+    <!-- CÍRCULO ROTATIVO -->
+    <div class="hero-circle" id="heroCircle">
+      <div class="hero-circle-img active" style="background-image: url('slide-circle-1.png')"></div>
+      <div class="hero-circle-img" style="background-image: url('slide-circle-2.png')"></div>
+      <div class="hero-circle-img" style="background-image: url('farma.png')"></div>
+      <div class="hero-circle-img" style="background-image: url('slide-circle-4.png')"></div>
+    </div>
+
+  </div>
+
+  <!-- RESTANTE DO SITE (mantido) -->
+  <section id="cartao" class="section-cartao">
+    <div class="container text-center">
+      <h2 class="mb-3 fw-bold">Seu cartão de acesso à saúde</h2>
+      <p class="section-subtitle mb-5">Tudo o que você precisa para cuidar da sua saúde em um só lugar, com economia e
+        praticidade.</p>
+      <div class="row g-4 d-flex align-items-stretch">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-beneficio h-100 d-flex flex-column">
+            <div class="card-color-bar bar-orange"></div>
+            <div class="card-body text-center p-4 d-flex flex-column">
+              <div class="card-icon icon-orange mb-3">
+                <i class="bi bi-camera-video"></i>
+              </div>
+              <h5 class="fw-bold">Consultas online</h5>
+              <p class="text-muted flex-grow-1">Atendimento médico interativo por vídeo a qualquer momento, sem precisar
+                sair de casa e enfrentar filas.</p>
+              <a href="#planos" class="btn btn-light mt-auto rounded-pill fw-600 shadow-sm custom-saiba-mais">Saiba
+                mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-beneficio h-100 d-flex flex-column">
+            <div class="card-color-bar bar-green"></div>
+            <div class="card-body text-center p-4 d-flex flex-column">
+              <div class="card-icon icon-green mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h5 class="fw-bold">Equipe multidisciplinar</h5>
+              <p class="text-muted flex-grow-1">Psicólogos, nutricionistas e personal trainers 100% integrados à sua
+                jornada de bem-estar contínuo.</p>
+              <a href="#planos" class="btn btn-light mt-auto rounded-pill fw-600 shadow-sm custom-saiba-mais">Saiba
+                mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-beneficio h-100 d-flex flex-column">
+            <div class="card-color-bar bar-yellow"></div>
+            <div class="card-body text-center p-4 d-flex flex-column">
+              <div class="card-icon icon-yellow mb-3">
+                <i class="bi bi-clipboard2-pulse"></i>
+              </div>
+              <h5 class="fw-bold">Descontos em exames</h5>
+              <p class="text-muted flex-grow-1">Acesso à nossa incrível rede de parceiros em laboratórios conceituados
+                com descontos reais em diagnósticos de imagem e análises.</p>
+              <a href="#planos" class="btn btn-light mt-auto rounded-pill fw-600 shadow-sm custom-saiba-mais">Saiba
+                mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-beneficio h-100 d-flex flex-column">
+            <div class="card-color-bar bar-teal"></div>
+            <div class="card-body text-center p-4 d-flex flex-column">
+              <div class="card-icon icon-teal mb-3">
+                <i class="bi bi-capsule"></i>
+              </div>
+              <h5 class="fw-bold">Benefícios farmácia</h5>
+              <p class="text-muted flex-grow-1">Economia de até 75% num amplo catálogo de medicamentos e perfumaria nas
+                melhores farmácias do país.</p>
+              <a href="#planos" class="btn btn-light mt-auto rounded-pill fw-600 shadow-sm custom-saiba-mais">Saiba
+                mais</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" class="section-planos">
+    <div class="container">
+      <div class="text-center mb-5 pb-3">
+        <span class="planos-label">Nossos Planos</span>
+        <h2 class="planos-titulo">Escolha seu plano</h2>
+        <p class="section-subtitle">Planos pensados para cada necessidade. Sem carência, sem burocracia.</p>
+      </div>
+
+      <!-- TODOS OS 5 PLANOS — UMA ÚNICA LINHA, alternando laranja e preto -->
+      <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-xl-5 align-items-stretch">
+
+        <!-- 1. MASTER — LARANJA -->
+        <div class="col">
+          <div class="plano-card-new h-100 d-flex flex-column">
+            <div class="plano-header plano-laranja">
+              <i class="bi bi-heart-pulse"></i>
+              <h4>Ideal</h4>
+              <p>Titular + 4 pessoas</p>
+            </div>
+            <div class="plano-body d-flex flex-column flex-grow-1">
+              <p class="plano-preco">R$ <span>24,90</span><small>/mês</small></p>
+              <ul class="plano-lista flex-grow-1">
+                <li><i class="bi bi-check-circle-fill"></i> Tá Dodói 24h - Ilimitado</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina Livre Clinico Geral</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted"> Tele Psicologia</s></li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted"> Tele Nutrição</s></li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted"> Tele Personal</s></li>
+                <li><i class="bi bi-check-circle-fill"></i> Rede Parceiros Meu Clube</li>
+                <li><i class="bi bi-check-circle-fill"></i> Até 75% off em farmácias</li>
+                <li><i class="bi bi-check-circle-fill"></i> Descontos em exames e consultas presenciais</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">Telemedicina PET 24 HRS</s></li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">SEGURO ICATU</s></li>
+              </ul>
+              <a href="#" class="btn btn-plano-laranja mt-auto w-100 rounded-pill">Contratar Plano</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PLENO — PRETO (DESTAQUE) -->
+        <div class="col">
+          <div class="plano-card-new plano-card-destaque h-100 d-flex flex-column">
+            <div class="plano-header plano-preto">
+              <i class="bi bi-shield-plus"></i>
+              <h4>Familia</h4>
+              <p>Titular + 4 pessoas</p>
+            </div>
+            <div class="plano-body d-flex flex-column flex-grow-1">
+              <p class="plano-preco">R$ <span>29,90</span><small>/mês</small></p>
+              <ul class="plano-lista flex-grow-1">
+                <li><i class="bi bi-check-circle-fill"></i> Tá Dodói 24h - Ilimitado</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina Livre Clinico Geral</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Psicologia</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Nutrição</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted"> Tele Personal</s></li>
+                <li><i class="bi bi-check-circle-fill"></i> Rede Parceiros Meu Clube</li>
+                <li><i class="bi bi-check-circle-fill"></i> Até 75% off em farmácias</li>
+                <li><i class="bi bi-check-circle-fill"></i> Descontos em exames e consultas presenciais</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">Telemedicina PET 24 HRS</s></li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">SEGURO ICATU</s></li>
+              </ul>
+              <a href="#" class="btn btn-plano-destaque mt-auto w-100 rounded-pill shadow-lg">Contratar Plano</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. PREMIUM — LARANJA -->
+        <div class="col">
+          <div class="plano-card-new h-100 d-flex flex-column">
+            <div class="plano-header plano-laranja">
+              <i class="bi bi-star"></i>
+              <h4>Master</h4>
+              <p>Titular + 5 pessoas</p>
+            </div>
+            <div class="plano-body d-flex flex-column flex-grow-1">
+              <p class="plano-preco">R$ <span>39,90</span><small>/mês</small></p>
+              <ul class="plano-lista flex-grow-1">
+                <li><i class="bi bi-check-circle-fill"></i> Tá Dodói 24h - Ilimitado</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina Especializada</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Psicologia</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Nutrição</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted"> Tele Personal</s></li>
+                <li><i class="bi bi-check-circle-fill"></i> Rede Parceiros Meu Clube</li>
+                <li><i class="bi bi-check-circle-fill"></i> Até 75% off em farmácias</li>
+                <li><i class="bi bi-check-circle-fill"></i> Descontos em exames e consultas presenciais</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina PET 24 HRS</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">SEGURO ICATU</s></li>
+              </ul>
+              <a href="#" class="btn btn-plano-laranja mt-auto w-100 rounded-pill">Contratar Plano</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PREMIUM PLUS — PRETO -->
+        <div class="col">
+          <div class="plano-card-new h-100 d-flex flex-column">
+            <div class="plano-header plano-preto">
+              <i class="bi bi-gem"></i>
+              <h4>Pleno</h4>
+              <p>Titular + 5 pessoas</p>
+            </div>
+            <div class="plano-body d-flex flex-column flex-grow-1">
+              <p class="plano-preco">R$ <span>39,90</span><small>/mês</small></p>
+              <ul class="plano-lista flex-grow-1">
+                <li><i class="bi bi-check-circle-fill"></i> Tá Dodói 24h - Ilimitado</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina Especializada</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Psicologia</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Nutrição</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Personal</li>
+                <li><i class="bi bi-check-circle-fill"></i> Rede Parceiros Meu Clube</li>
+                <li><i class="bi bi-check-circle-fill"></i> Até 75% off em farmácias</li>
+                <li><i class="bi bi-check-circle-fill"></i> Descontos em exames e consultas presenciais</li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">Telemedicina PET 24 HRS</s></li>
+                <li><i class="bi bi-x-circle text-muted"></i><s class="text-muted">SEGURO ICATU</s></li>
+              </ul>
+              <a href="#" class="btn btn-plano-preto mt-auto w-100 rounded-pill">Contratar Plano</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="plano-card-new h-100 d-flex flex-column">
+            <div class="plano-header plano-laranja">
+              <i class="bi bi-house-heart"></i>
+              <h4>Premium</h4>
+              <p>Titular + 5 pessoas</p>
+            </div>
+            <div class="plano-body d-flex flex-column flex-grow-1">
+              <p class="plano-preco">R$ <span>49,90</span><small>/mês</small></p>
+              <ul class="plano-lista flex-grow-1">
+                <li><i class="bi bi-check-circle-fill"></i> Tá Dodói 24h - Ilimitado</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina Especializada</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Psicologia</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Nutrição</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tele Personal</li>
+                <li><i class="bi bi-check-circle-fill"></i> Rede Parceiros Meu Clube</li>
+                <li><i class="bi bi-check-circle-fill"></i> Até 75% off em farmácias</li>
+                <li><i class="bi bi-check-circle-fill"></i> Descontos em exames e consultas presenciais</li>
+                <li><i class="bi bi-check-circle-fill"></i> Telemedicina PET 24 HRS</li>
+                <li class="fw-bold"><i class="bi bi-shield-fill-check"></i> SEGURO ICATU</li>
+              </ul>
+              <a href="#" class="btn btn-plano-laranja mt-auto w-100 rounded-pill">Contratar Plano</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="logo-branca.png" height="40">
+      <p class="mb-0">&copy; Acesso Saúde</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Rotação do círculo ao trocar slides
+    const heroCarousel = document.getElementById('heroCarousel');
+    const heroCircle = document.getElementById('heroCircle');
+    const circleImgs = document.querySelectorAll('.hero-circle-img');
+    let rotationAngle = 0;
+
+    heroCarousel.addEventListener('slide.bs.carousel', function (e) {
+      // Anima rotação
+      rotationAngle += 360;
+      heroCircle.style.transform = `rotate(${rotationAngle}deg)`;
+
+      // Troca imagem do círculo
+      circleImgs.forEach(img => img.classList.remove('active'));
+      circleImgs[e.to].classList.add('active');
+    });
+  </script>
+</body>
+
+</html>

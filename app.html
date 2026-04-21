@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe nosso App — Cartão Acesso Saúde</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <!-- HEADER DARK -->
+    <nav class="navbar navbar-dark-custom w-100 z-3 p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <div class="logo-circle text-white d-flex align-items-center justify-content-center"
+                    style="background-color: var(--primary-orange); width: 40px; height: 40px; border-radius: 50%;">
+                    <i class="bi bi-phone-fill fs-5"></i>
+                </div>
+                <span class="fs-5 fw-bolder">App Acesso Saúde</span>
+            </a>
+            <a href="index.html" class="btn btn-outline-light-custom fw-600 rounded-pill px-4">Voltar</a>
+        </div>
+    </nav>
+
+    <!-- HERO OF THE APP -->
+    <section class="app-hero">
+        <div class="container">
+            <h1 class="display-5 fw-bolder mb-3">Seu benefício na palma da mão.</h1>
+            <p class="lead text-muted mx-auto mb-4" style="max-width: 600px;">
+                Navegue pelas suas consultas, emita suas guias de exame e contate a rede credenciada de forma
+                instantânea.
+            </p>
+            <a href="https://app.cartaoacessosaude.com.br/" target="_blank"
+                class="btn btn-main btn-lg px-5 py-3 rounded-pill">
+                Acessar o Web App Agora <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- GUIAS DE INSTALAÇÃO (ABAS) -->
+    <section class="installer-wrapper">
+
+        <!-- HEADER PANEL DA GUIA -->
+        <div class="steps-header-panel">
+            <i class="bi bi-phone steps-icon"></i>
+            <h4 class="fw-bold mb-1">Como Instalar</h4>
+            <p class="text-muted small mb-0">Como instalar o aplicativo em seu dispositivo</p>
+
+            <div class="nav-tabs-custom">
+                <button class="tab-btn" onclick="openTab('ios', this)">Apple iOS</button>
+                <button class="tab-btn active" onclick="openTab('android', this)">Android</button>
+                <button class="tab-btn" onclick="openTab('macos', this)">Mac OS</button>
+                <button class="tab-btn" onclick="openTab('windows', this)">Windows</button>
+            </div>
+        </div>
+
+        <!-- CONTEUDO: ANDROID -->
+        <div id="tab-android" class="tab-content active">
+            <h3 class="tab-title">Android</h3>
+
+            <div class="instruction-grid">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-browser-chrome"></i></div>
+                        <h4 class="step-title">Abra o Chrome</h4>
+                    </div>
+                    <p class="step-desc">Use o navegador Google Chrome no seu dispositivo Android. Outros navegadores
+                        baseados em Chromium também funcionam.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-phone"></i></div>
+                        <h4 class="step-title">Acesse o site</h4>
+                    </div>
+                    <p class="step-desc">Navegue até o site do aplicativo através do Chrome. Aguarde a página carregar
+                        completamente.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-bell"></i></div>
+                        <h4 class="step-title">Procure o banner de instalação</h4>
+                    </div>
+                    <p class="step-desc">O Chrome pode mostrar um banner na parte inferior da tela oferecendo para
+                        instalar o aplicativo. Se não aparecer, vá para o próximo passo.</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-list"></i></div>
+                        <h4 class="step-title">Abra o menu do navegador</h4>
+                    </div>
+                    <p class="step-desc">Toque no ícone de menu (três pontos) no canto superior direito do Chrome para
+                        abrir as opções.</p>
+                </div>
+
+                <!-- Passo 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-download"></i></div>
+                        <h4 class="step-title">Selecione "Instalar app" ou "Adicionar à tela inicial"</h4>
+                    </div>
+                    <p class="step-desc">No menu, procure pela opção "Instalar app" ou "Adicionar à tela inicial" e
+                        toque nela.</p>
+                </div>
+
+                <!-- Passo 6 -->
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-check-circle"></i></div>
+                        <h4 class="step-title">Confirme a instalação</h4>
+                    </div>
+                    <p class="step-desc">Uma janela de confirmação aparecerá. Toque em "Instalar" para confirmar. O
+                        aplicativo será adicionado à sua tela inicial!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTEUDO: APPLE IOS -->
+        <div id="tab-ios" class="tab-content">
+            <h3 class="tab-title">Apple iOS</h3>
+
+            <div class="instruction-grid">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-compass"></i></div>
+                        <h4 class="step-title">Abra o Safari</h4>
+                    </div>
+                    <p class="step-desc">Certifique-se de estar usando o navegador Safari no seu iPhone. O PWA não pode
+                        ser instalado através de outros navegadores.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-phone"></i></div>
+                        <h4 class="step-title">Acesse o site</h4>
+                    </div>
+                    <p class="step-desc">Navegue até o site do aplicativo através do Safari. Aguarde a página carregar
+                        completamente.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-share"></i></div>
+                        <h4 class="step-title">Toque no botão de compartilhar</h4>
+                    </div>
+                    <p class="step-desc">Na barra inferior do Safari, toque no ícone de compartilhar (quadrado com seta
+                        para cima).</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-plus"></i></div>
+                        <h4 class="step-title">Selecione "Adicionar à Tela de Início"</h4>
+                    </div>
+                    <p class="step-desc">Role o menu de compartilhamento para baixo e encontre a opção "Adicionar à Tela
+                        de Início". Toque nela.</p>
+                </div>
+
+                <!-- Passo 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-box-arrow-right"></i></div>
+                        <h4 class="step-title">Personalize e confirme</h4>
+                    </div>
+                    <p class="step-desc">Você pode personalizar o nome do aplicativo se desejar. Depois, toque em
+                        "Adicionar" no canto superior direito.</p>
+                </div>
+
+                <!-- Passo 6 -->
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-check-circle"></i></div>
+                        <h4 class="step-title">Pronto!</h4>
+                    </div>
+                    <p class="step-desc">O aplicativo foi adicionado à sua tela inicial. Agora você pode abri-lo
+                        diretamente como um app nativo!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTEUDO: MAC OS -->
+        <div id="tab-macos" class="tab-content">
+            <h3 class="tab-title">Mac OS</h3>
+
+            <div class="instruction-grid">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-compass"></i></div>
+                        <h4 class="step-title">Abra o Safari</h4>
+                    </div>
+                    <p class="step-desc">Use o navegador Safari no seu Mac. O Safari oferece suporte completo para
+                        instalação de PWAs.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-display"></i></div>
+                        <h4 class="step-title">Acesse o site</h4>
+                    </div>
+                    <p class="step-desc">Navegue até o site do aplicativo através do Safari. Aguarde a página carregar
+                        completamente.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-share"></i></div>
+                        <h4 class="step-title">Clique no botão de compartilhar</h4>
+                    </div>
+                    <p class="step-desc">Na barra de endereço do Safari, clique no ícone de compartilhar (quadrado com
+                        seta para cima) no lado direito.</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-plus"></i></div>
+                        <h4 class="step-title">Selecione "Adicionar à Dock"</h4>
+                    </div>
+                    <p class="step-desc">No menu de compartilhamento, procure e clique na opção "Adicionar à Dock" para
+                        instalar o aplicativo.</p>
+                </div>
+
+                <!-- Passo 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-box-arrow-right"></i></div>
+                        <h4 class="step-title">Confirme a instalação</h4>
+                    </div>
+                    <p class="step-desc">Uma janela de confirmação pode aparecer. Clique em "Adicionar" para confirmar a
+                        instalação do aplicativo.</p>
+                </div>
+
+                <!-- Passo 6 -->
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-check-circle"></i></div>
+                        <h4 class="step-title">Pronto!</h4>
+                    </div>
+                    <p class="step-desc">O aplicativo foi adicionado à sua Dock e Launchpad. Agora você pode abri-lo
+                        como um app nativo do Mac!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTEUDO: WINDOWS -->
+        <div id="tab-windows" class="tab-content">
+            <h3 class="tab-title">Windows</h3>
+
+            <div class="instruction-grid">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-globe"></i></div>
+                        <h4 class="step-title">Abra o Microsoft Edge ou Chrome</h4>
+                    </div>
+                    <p class="step-desc">Use o navegador Microsoft Edge (recomendado) ou Google Chrome no Windows. Ambos
+                        suportam instalação de PWAs.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-laptop"></i></div>
+                        <h4 class="step-title">Acesse o site</h4>
+                    </div>
+                    <p class="step-desc">Navegue até o site do aplicativo através do navegador. Aguarde a página
+                        carregar completamente.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-bell"></i></div>
+                        <h4 class="step-title">Procure o ícone de instalação</h4>
+                    </div>
+                    <p class="step-desc">Na barra de endereço, procure pelo ícone de instalação (um "+" ou ícone de
+                        download). Se não aparecer, use o menu do navegador.</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-list"></i></div>
+                        <h4 class="step-title">Abra o menu do navegador</h4>
+                    </div>
+                    <p class="step-desc">Se o ícone não aparecer, clique no menu (três pontos no Edge ou três linhas no
+                        Chrome) no canto superior direito.</p>
+                </div>
+
+                <!-- Passo 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-download"></i></div>
+                        <h4 class="step-title">Selecione "Instalar aplicativo" ou "Aplicativo"</h4>
+                    </div>
+                    <p class="step-desc">No menu, procure pela opção "Instalar aplicativo" (Edge) ou "Instalar [nome do
+                        app]" (Chrome) e clique nela.</p>
+                </div>
+
+                <!-- Passo 6 -->
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-card-header">
+                        <div class="step-icon-box"><i class="bi bi-check-circle"></i></div>
+                        <h4 class="step-title">Confirme e pronto!</h4>
+                    </div>
+                    <p class="step-desc">Uma janela de confirmação aparecerá. Clique em "Instalar" para confirmar. O
+                        aplicativo será instalado e aparecerá no menu Iniciar e na área de trabalho!</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER DA UNIDADE DARK -->
+    <footer class="py-4 border-top" style="border-top-color: var(--card-border) !important;">
+        <div class="container text-center">
+            <p class="mb-0 text-muted-dark small fw-500">&copy; Cartão Acesso Saúde. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Customizado (Lógica das Abas) -->
+    <script src="app.js"></script>
+</body>
+
+</html>
